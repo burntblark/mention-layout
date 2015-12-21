@@ -1,0 +1,207 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 5, 2015, 5:33:55 PM
+    Author     : Tunde
+*/
+@import "../vendor/bootstrap/css/bootstrap.css";
+html{
+    height: 100vh;
+}
+body.fullscreen{
+    position: relative;
+    height: 100vh;
+    background: #F3F5F8;
+    color: #1f2528;
+    font-family: HelveticaNeue,'Helvetica Neue',Helvetica,Arial,roboto,"DejaVu Sans","Bitstream Vera Sans","Liberation Sans",sans-serif;
+    overflow: auto;
+}
+.float{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+#left{
+    background: #1F272F;
+    width: 200px;
+}
+#stream{
+    background: #FFF;
+    width: 350px;
+    border-right: 1px solid #DDD; 
+}
+#stream.float{
+    left: 200px;
+}
+#content{
+    background: transparent;
+}
+#content.float{
+    left: 550px;
+    right: 0;
+    overflow: auto;
+}
+#content, #left, #stream{
+    top: 50px;
+}
+::selection {
+    background: #1aa5ec;
+    color: #fff;
+    text-shadow: none;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-default{
+    background: #1799DD;
+    border: none;
+}
+.navbar-default .navbar-nav > li {
+    border-left: 1px solid #2ea9e9;
+    border-right: 1px solid #2ea9e9;
+}
+.navbar-default .navbar-nav > li + li{
+    border-left: none;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+.navbar-default .navbar-text {
+    color: #FFF;
+}
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #FFF;
+    background-color: #1279af;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #1279af;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #FFF;
+    background-color: #1279af;
+}
+.navbar-default .nav > li > a {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.nav-stacked > li + li {
+    margin-top: 0;
+    margin-left: 0;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav-pills > li > a {
+    border-radius: 0px;
+}
+#phrases.list-group > li.list-group-item{
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #FFF;
+    cursor: pointer;
+}
+#phrases.list-group > li.list-group-item .list-group-content{
+    background: rgba(255,255,255,0.05);
+    border: none;
+    padding: 10px 15px;
+    border-left: 3px solid #FFF;
+    border-radius: 0;
+}
+#phrases.list-group > li.list-group-item:hover .list-group-content{
+    background: rgba(255,255,255,0.1);
+}
+#phrases.list-group > li.list-group-item .nav{
+    display: none;
+}
+#phrases.list-group > li.list-group-item .nav.active{
+    display: block;
+}
+#phrases.list-group .list-group-item-text{
+    opacity: 0.6;
+    font-size: 80%;
+}
+#phrases.list-group > li.list-group-item:nth-child(odd) .list-group-content{
+    border-left: 3px solid yellow;
+}
+.navbar-context{
+    background: #FFF;
+    border-bottom: 1px solid #DDD;
+}
+.navbar-context{
+    margin: 0;
+}
+.post{
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+}
+.post .post-avatar{
+    float: left;
+    width: 75px;
+    min-height: 75px;
+    padding: 10px;
+    padding-right: 5px;
+    text-align: center;
+}
+.post .post-body{
+    background: #FFF;
+    margin-left: 75px;
+    min-height: 75px;
+    padding: 10px;
+    padding-left: 5px;
+}
+.post-meta{
+    opacity: 0.6;
+    font-size: 85%;
+}
+.post-meta .post-owner{
+    float: left;
+    min-width: 80%;
+}
+.post-meta .post-timestamp{
+    margin-left: 80%; 
+    text-align: right;
+    color: #1aa5ec;
+}
+.post-description{
+    opacity: 0.7;
+    font-size: 85%;
+}
+.modal.fade:not(.in) .modal-dialog{
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+}
+.modal-dialog{
+    left: auto; 
+    right: 0; 
+    bottom: 0; 
+    height: auto; 
+    margin: 0; 
+    width: 80%;
+}
+.modal-content{
+    border: none;
+}
+@media (max-width: 768px) {
+    .modal-dialog {
+        left: 0;
+        width: auto;
+    }
+}
+@media (max-width: 768px) {
+    #left {
+        right: 0;
+        width: auto;
+        z-index: 2000;
+    }
+}
